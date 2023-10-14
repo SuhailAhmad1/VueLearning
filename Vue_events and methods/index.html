@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color: aqua;
+            font-size: xx-large;
+        }
+        body{
+            background: linear-gradient(90deg, rgb(182, 216, 207), rgb(66, 90, 59))
+        }
+        #app{
+            color: white;
+            background: linear-gradient(90deg,rgb(48, 36, 36), rgb(33, 58, 43), rgb(54, 18, 18));
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            border-radius: 20%;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>Events in Action</h2>
+        <button @click="add">Add</button>
+        <button @click="remove">Remove</button>
+        <p>Result : {{ counter }}</p>
+        <br>
+        <label for="message">Type Message : </label>
+        <input type="text" name="message" id="message" v-model="message"/>
+        <button @click="reset">Reset Input</button>
+        <p>Typed Message : {{ message }}</p>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
