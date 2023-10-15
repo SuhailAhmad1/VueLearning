@@ -24,8 +24,10 @@
             border-radius: 20%;
         }
         button{
+            color: blue;
             padding: 10px;
             margin: 10px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -39,7 +41,7 @@
         <label for="message">Type Message : </label>
         <input type="text" name="message" id="message" v-model="message"/>
         <button @click="reset">Reset Input</button>
-        <p>Typed Message : {{ message }}</p>
+        <p>Typed Message : {{ full_message }}</p>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
