@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+    <style>
+      #app{
+            color: white;
+            background: linear-gradient(90deg,rgb(48, 36, 36), rgb(33, 58, 43), rgb(54, 18, 18));
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            border-radius: 20%;
+        }
+      .demo{
+        background-color: white;
+        color: black;
+        height: 30px;
+        width: 250px;
+        margin-left: 100px;
+        margin-top: 10px;
+      }
+      .active{
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div :class="selectedA? 'demo active': 'demo'" @click="selectDiv('A')"></div>
+      <div class="demo" :class="{active: selectedB}" @click="selectDiv('B')"></div>
+      <div :class="selectedC? 'demo active': 'demo'" @click="selectDiv('C')"></div>
+    </div>
+  </body>
+</html>

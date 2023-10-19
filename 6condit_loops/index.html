@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <script src="app.js" defer></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        body{
+            background-color: rgb(43, 54, 58);
+        }
+        #main-div{
+            width: 300px;
+            height: 300px;
+            margin: 150px 0 0 180px;
+            text-align: center;
+            font-size: 23px;
+            background: linear-gradient(90deg,rgb(29, 24, 24), rgb(48, 37, 37));
+            border-radius: 20px;
+        }
+        h2{
+            background-color: rgb(53, 214, 206);
+            margin-top: 0;
+            border-radius: 20px;
+            padding: 20px 0 20px 0;
+        }
+        h3{
+            background-color: rgb(53, 155, 116);
+            margin: 10px;
+            border-radius: 20px;
+        }
+        p{
+            color: rgb(231, 100, 100);
+        }
+        ul{
+            text-align: left;
+            color: rgb(159, 165, 152);
+        }
+        li{
+            display: flex;
+            justify-content:space-around;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="main-div">
+            <h2>TODO App</h2>
+            <input type="text" v-model="task">
+            <button @click="addTask">Add Task</button>
+            <p v-if="total_tasks.length === 0">No Tasks added, please add some</p>
+            <h3 v-else>Tasks</h3>
+            <ul>
+                <li v-for="(val, index) in total_tasks" @click="removeTask(index)">{{val}}<button>Delete</button></li>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
