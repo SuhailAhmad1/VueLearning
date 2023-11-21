@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      h2{
+        color: aqua;
+        background-color: beige;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
+      <h2>The is the heading</h2>
       <label for="goal">Goal</label>
       <input type="text" id="goal" v-model="enteredValue" />
       <button v-on:click="addGoal">Add Goal</button>
